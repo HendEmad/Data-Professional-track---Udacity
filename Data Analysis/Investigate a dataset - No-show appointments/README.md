@@ -3,7 +3,7 @@ This was the second project in Data Professional track from Udacity provided by 
 
 ## **Progress outline:**
 Using data analysis process to explore this data set answer questions:
-1. Clean data.
-2. Explore data.
-3. Answer questions by visualize the data.
-4. Make conclusions.
+1. `Clean data`
+2. `Explore data`
+3. `Answer questions by visualize the data`
+4. `Make conclusions`
