@@ -7,3 +7,10 @@ Using data analysis process to explore this data set answer questions:
 2. `Explore data`
 3. `Answer questions by visualize the data`
 4. `Make conclusions`
+
+## **Websites helped me:**
+* https://machinelearningmastery.com/chi-squared-test-for-machine-learning/
+* https://machinelearningmastery.com/statistical-hypothesis-tests/
+* https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/
+* https://www.statisticshowto.com/probability-and-statistics/t-test/
+* https://www.geeksforgeeks.org/python-pearsons-chi-square-test/
