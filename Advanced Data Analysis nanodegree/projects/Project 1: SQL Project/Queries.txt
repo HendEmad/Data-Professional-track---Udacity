@@ -1,0 +1,81 @@
+/*Query 1 - Preferred media type based on number of customers bought it*/
+select mt.Name, count( c.CustomerId) customers_num
+from Customer c
+join Invoice i on c.CustomerId = i.CustomerId
+join InvoiceLine il on il.InvoiceId = i.InvoiceId
+join Track t on t.TrackId = il.TrackId
+join MediaType mt on mt.MediaTypeId = t.MediaTypeId
+group by 1
+order by 2 desc
+
+
+/*Query 2 - Top tracks sold by genre*/
+select g.name, count(*) sold_tracks_num
+from Track t
+join Genre g on t.GenreId = g.GenreId
+group by 1
+order by 2 desc
+
+
+/*Query 3 - Customers' number vs. sales' average
+(grouping one-cusomers countries under 'other' country name)*/
+--note that these grouped countries are execluted in the analysis because of limited provided data
+with all_country_stats
+  as (select
+    c.country country_name,
+    sum(i.total) total_order,
+    round(avg(i.total), 2) avg_order,
+    count(invoiceid) orders_num,
+    count(distinct c.customerid) Customers_num
+  from invoice i
+  join customer c
+    on c.customerid = i.customerid
+  group by 1),
+
+  country
+  as (select
+    case
+      when Customers_num = 1 then 'Other'
+      else country_name
+    end as country,
+    *
+  from all_country_stats)
+
+  select distinct
+    (country),
+    sum(Customers_num) Customers_num,
+    sum(orders_num) orders_num,
+    sum(total_order) total_order,
+    round(avg(avg_order), 2) avg_order
+  from country
+  where not country = 'Other'
+  group by 1
+  order by 3 desc;
+
+
+/*Query 4 - Top 10 sold albums */
+select al.AlbumId, al.title, ar.name artist_name, 
+sum(il.UnitPrice * il.Quantity) as total_sales
+from Artist ar
+join album al on ar.ArtistId = al.ArtistId
+join track t on t.AlbumId = al.AlbumId
+join InvoiceLine il on il.TrackId = t.TrackId
+group by 1, 2, 3
+order by 4 desc
+limit 10;
+
+
+/*Query 5 - Sales made by the employees*/
+select (case when e.EmployeeId = 3 then i.total
+            else null
+			end) as Jane_Peacock,
+	   (case when e.EmployeeId = 4 then i.total
+	        else null
+			end) as Margaret_Park,
+	   (case when e.EmployeeId = 5 then i.total
+	        else null
+            end) as Steve_Johnson
+from employee e
+join Customer c on e.EmployeeId = c.SupportRepId
+join Invoice i on i.CustomerId = c.CustomerId
+
