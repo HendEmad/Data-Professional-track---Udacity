@@ -1,0 +1,78 @@
+/*Query 1 - The most popular media types based on customers number*/
+SELECT mt.name media_type, count(DISTINCT c.CustomerId) total_sales
+FROM MediaType mt
+JOIN track t ON t.MediaTypeId = mt.MediaTypeId
+JOIN InvoiceLine il ON il.TrackId = t.TrackId
+JOIN invoice i ON i.InvoiceId = il.InvoiceId
+JOIN Customer c ON c.CustomerId = i.CustomerId
+GROUP BY 1
+ORDER BY 2 DESC
+
+/*Query 2 - Most popular genres and artists based on tracks' sales and the cost of them(Top 10)*/
+SELECT genre, artist_name, avg(tracks_sales) as avg_tracks_sales, avg(cost) as avg_cost
+FROM(
+SELECT g.name genre, ar.name artist_name, count(*) tracks_sales,
+                sum(il.UnitPrice * il.Quantity) cost
+FROM InvoiceLine il
+JOIN Track t ON t.TrackId = il.TrackId
+JOIN Genre g ON g.GenreId = t.GenreId
+JOIN Album al ON al.AlbumId = t.AlbumId
+JOIN Artist ar ON ar.ArtistId = al.ArtistId
+GROUP BY 1, 2) inner_query
+GROUP BY 1, 2
+ORDER BY 3 DESC, 4
+LIMIT 10;
+
+
+/*Query 3 - Genre that have the most tracks*/
+SELECT g.name, COUNT(*) sold_tracks_num
+FROM Track t
+JOIN Genre g ON t.GenreId = g.GenreId
+GROUP BY 1
+ORDER BY 2 DESC
+
+
+/*Query 4 - Top 10 genres in US*/
+SELECT g.name, count(i.BillingCountry)  Country_count
+FROM Genre g 
+JOIN Track t ON t.GenreId = g.GenreId
+JOIN InvoiceLine il ON il.TrackId = t.TrackId
+JOIN Invoice i ON i.InvoiceId = il.InvoiceId
+                         AND i.BillingCountry = "USA"
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10
+
+
+/*Query 5 - Top 10 sold albums*/
+SELECT  al.title, ar.name artist_name, 
+SUM(il.UnitPrice * il.Quantity) AS total_sales
+FROM Artist ar
+JOIN album al ON ar.ArtistId = al.ArtistId
+JOIN track t ON t.AlbumId = al.AlbumId
+JOIN InvoiceLine il ON il.TrackId = t.TrackId
+GROUP BY 1, 2
+ORDER BY 3 DESC
+LIMIT 10;
+
+/*Query 6 - Best customer based on amount of money they have spent for each Country*/
+select c.Country state, sum(i.total) total_spent, c.FirstName || " " || c.LastName customer,
+           count(i.InvoiceId) purchases,
+           CASE WHEN sum(i.total) < 40 THEN 'low customer'
+	     WHEN sum(i.total) BETWEEN 40 AND 100 THEN 'normal customer'
+	     ELSE 'high customer'
+                       END AS customer_level
+FROM Customer c
+JOIN Invoice i ON i.CustomerId = c.CustomerId
+GROUP BY 1, 3
+ORDER BY 2 DESC
+
+
+/*Query 7 - Performance of sales for each employee*/
+SELECT e.FirstName || " " || e.LastName employee_name,
+       e.HireDate hire_date, sum(i.total) total_sales
+FROM Invoice i 
+JOIN Customer c ON c.CustomerId = i.CustomerId
+JOIN Employee e ON e.EmployeeId = c.SupportRepId
+GROUP BY 1, 2
+ORDER BY 3 DESC
