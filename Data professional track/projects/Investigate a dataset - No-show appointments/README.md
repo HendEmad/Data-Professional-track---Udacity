@@ -6,7 +6,7 @@ Using data analysis process to explore this data set answer questions:
 
 1. Clean data
 2. Explore data
-3. Answer questions by visualize the data
+3. Answer questions by visualizing the data
 4. Make conclusions
 
 **Websites helped me:**
