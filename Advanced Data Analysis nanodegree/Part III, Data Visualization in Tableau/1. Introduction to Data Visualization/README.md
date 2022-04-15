@@ -73,7 +73,7 @@ This plot can be used to visualize bioth the strength and the direction of the r
 ### Quantitative variable overtime visualization
 Line plots are a common plot for viewing data over time. These plots allow us to quickly identify overall trends, seasonal occurrences, peaks, and valleys in the data. You will commonly see these used in looking at stock prices over time, but really tracking anything over time can be easily viewed using these plots.
 
-### The key to building great data visualizations is in aiming them at answering the questions you want answered:
+## The key to building great data visualizations is in aiming them at answering the questions you want answered:
 
 consider we run a blog, and we want ti understand traffic on thr blog. for simplicity, consider we just use 12 months worth of traffic:
 - If we want to know the month we had the most traffic, the best plot would be a bar chart or pareto chart(as tbis would plot the months in order from heighest to lowest traffic). Here, each bar is the amount of traffic for a particular month.
@@ -96,7 +96,7 @@ This would be to tough to be answered using the bar chart or the line chart. It'
 
 ![Screenshot (474)](https://user-images.githubusercontent.com/91827137/163557362-488b992d-8fa3-4477-9353-353733886259.png)
 
-### Dealing with more than Two variables
+## Dealing with more than Two variables
 ***If we want to compare two categorical variables with another variable, we would probably use a **_Side by side bar chart.
 ![Screenshot (476)](https://user-images.githubusercontent.com/91827137/163563496-44722494-40eb-489b-9d46-4539d64a87f9.png)
 
@@ -119,7 +119,7 @@ This seems to be as the line chart, but here each product is shown in terms of p
 
 Here, each product has a color in the bar, and the height of the bar is the amount of sales for each product.
 
-### Quiz 4:
+## Quiz 4:
 
 For these plots:
 
@@ -134,7 +134,7 @@ For these plots:
 ***Did total sales ever exceed 1000 units?***
 - The answer is Yes, in November. this is easiest to see in either Plot 2 or Plot 3.
 
-### Dashbords:
+## Dashbords:
 
 Sometimes a single plot cannot convey all the information in a data set. for example, if we want to compare price by sales by location and by the product, and then additionaly we want to see how these changes happen over time. In this case we will use data dashboards.
 
