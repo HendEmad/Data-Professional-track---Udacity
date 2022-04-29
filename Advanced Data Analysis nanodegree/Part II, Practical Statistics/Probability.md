@@ -1,4 +1,4 @@
-## Probability:
+# Probability:
 - In probability, we make predictions about the future events based on causes that we assume (You predicting data).
 - In Statistics, we analyze the data from the past events to infer (understand) what those causes could be (You are using the data to predict). 
 - The probability of a fair coin notation is — P(Heads) = 0.5.
@@ -27,12 +27,29 @@ P(H) = P(H, T) + P(T, H) = 0.25 + 0.25 = 0.5
 
 ![Capture](https://user-images.githubusercontent.com/91827137/165459029-8297ad2a-e532-4c7d-81ff-6c0a28efd555.PNG)
 
+--> Because there are eight possibilities and they each could occur with the same probability which is 1/8 or 0.125. Further, only Cases 4, 6, and 7 have the possibility of having only one Head. If you sum them, you get 0.375 (0.125 + 0.125 + 0.125 = 0.375).
 
+--> ***If the coin is loaded and P(H) = 0.6. So, we will use the multiplication method: ***
 
+```Q)``` What is the probability of seeing only one Head in three flips with a loaded coin? P(H) = 0.6
 
+```Answer``` P(H) = 0.6 → → → P(T) = 0.4
 
+-> H will appear once in three cases so H * H * H = 0.6 * 0.6 * 0.6 = 0.288 OR (0.6 * 0.4 * 0.4) * 3 = 0.288
 
+***Note***
+Probability rules are used when trying to figure out only independent variables.
+So, If we are trying to figure out the probability of dependent events, like what is the probability that it will rain tomorrow if it rained today, do not follow these same rules.
 
+# Binomial Distribution
+- Determines the probability of a string of independent coin flip-like events.
+- Number of Ways to get k Heads in n flips of a coin: ```n! / k! * (n-k)!```
+- Probability of k Heads and (n-k) Tails: ```(p^k) * ((1-p)^(n-k))```
+-  Binomial Distribution Formula: ```n! / (k! * (n-k)!) * (p^k) * ((1-p)^(n-k))``` 
+
+# Practical Statistics:
+
+Conditional Probability: The probability of the outcome of one event is affected by the outcome of another event.
 
 
 
