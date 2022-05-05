@@ -41,7 +41,7 @@ The addition result of the two values is 0.108. This means that there is a 0.108
 
 ***_Normalizing 2_***
 
-![Capture](https://user-images.githubusercontent.com/91827137/166395864-4e7decc0-8944-434e-b98d-8bd7f638a34d.PNG)
+![Capture](https://user-images.githubusercontent.com/91827137/166395864-4e7decc0-8944-434e-b98d-8bd7f638a34d.PNG) 
 
 --> So, the postrtior P(C|pos) is = P(C, pos) / [P(C, pos) + P(¬C, pos)] = 0.009 / 0.108 = 0.083
 
@@ -53,3 +53,13 @@ AND P(¬C|pos) = P(¬C, pos) / [P(C, pos) + P(¬C, pos)] = 0.099 / 0.108 = 0.916
 
 ![Capture](https://user-images.githubusercontent.com/91827137/166396385-ae8e2cb4-4abf-49a8-af5e-5b7cffd1872c.PNG)
 
+### Bayes Rule Diagram
+
+![Screenshot (509)](https://user-images.githubusercontent.com/91827137/166862514-ea750c94-8840-4f9d-a50b-d48667d923b3.png)
+
+- Cancer Hypothesis = Prior probability x sensitivity
+- No Cancer Hypothesis = Prior probability x (1-sensitivity)
+- Normalizer = Cancer Hypothesis + No Cancer Hypothesis
+
+- Posterior Probability (Cancer) = Cancer Hypothesis / Normalizer
+- Posterior Probability (No Cancer) = No Cancer Hypothesis / Normalizer
