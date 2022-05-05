@@ -105,5 +105,3 @@ For test Neg:
     b. Specificity – P(Negative|¬Cancer) – Tells us how often the test is negative when the variable is false.
     
 _note_ : The two variables (Cancer hypothesis & No cancer hypothesis for these examples) are also called ```the joint probabilities of two events```
-
-### Another example: Robot Sensing:
