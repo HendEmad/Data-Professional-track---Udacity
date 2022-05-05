@@ -63,3 +63,47 @@ AND P(¬C|pos) = P(¬C, pos) / [P(C, pos) + P(¬C, pos)] = 0.099 / 0.108 = 0.916
 
 - Posterior Probability (Cancer) = Cancer Hypothesis / Normalizer
 - Posterior Probability (No Cancer) = No Cancer Hypothesis / Normalizer
+
+So, for this example:
+
+![Capture](https://user-images.githubusercontent.com/91827137/166865634-8237e469-1dc7-4265-a918-6a56ca7eee09.PNG)
+
+### Another example:
+
+P(C) = 0.1 ; P(POS|C) = 0.9 ; P(NEG|¬C) = 0.5
+
+SO:
+
+P(¬C) = 1 - 0.1 = 0.9
+
+P(NEG|C) = 1 - P(POS|C) = 1 - 0.9 = 0.1
+
+P(POS|¬C) = 1 - P(NEG|¬C) = 1 - 0.5 = 0.5
+
+-----------------------------------------------------------------
+
+For test Neg:
+
+1. The probability of having cancer and receiving a negative test result P(Cancer, Negative) = P(C,NEG) = Cancer Hypothesis = P(C) * P(NEG|C) = 0.1 * 0.1 = 0.01
+2. The probability of not having cancer and receiving a negative test result P(¬Cancer, Negative) = P(¬C, NEG) = No cancer hypothesis = P(¬C) * P(NEG|¬C) = 0.9 * 0.5 = 0.45
+3. The normalizer P(Negative) based on the probabilities above = P(NEG) = P(C,NEG) + P(¬C, NEG) = 0.01 + 0.45 = 0.46
+4. The posterior probabilities of having cancer given a negative test result and not having cancer given a negative test result:
+
+     a. P(C|NEG) = P(C,NEG) / P(NEG) = 0.01 / 0.46 = 0.0217
+     b. P(¬C|NEG) = P(¬C, NEG) / P(NEG) = 0.45 / 0.46 = 0.9783
+     
+5. The posterior probabilities of having cancer given a positive test result and not having cancer given a positive test result:
+     a. Cancer Hypothesis = P(C, POS) = P(C) * P(POS|C) = 0.1 * 0.9 = 0.09
+     B. No Cancer Hypothesis = P(¬C, POS) = P(¬C) * P(POS|¬C) = 0.9 * 0.5 = 0.45
+     c. Normalizer = P(POS) = 0.09 + 0.45 = 0.54
+     d. Posterior Probability (cancer) = P(C|POS) = 0.09 / 0.54 = 0.1667
+     e. Posterior Probability (no cancer) = P(¬C|POS) = 0.45 / 0.54 = 0.833
+     
+## Bayes Rule Summary
+1. Prior probability – P(C) – Tells us how frequently our variable is true. And the test is characterized by:
+    a. Sensitivity – P(Positive|Cancer) – Tells us how often the test is positive when the   variable is true.
+    b. Specificity – P(Negative|¬Cancer) – Tells us how often the test is negative when the variable is false.
+    
+_note_ : The two variables (Cancer hypothesis & No cancer hypothesis for these examples) are also called ```the joint probabilities of two events```
+
+### Another example: Robot Sensing:
