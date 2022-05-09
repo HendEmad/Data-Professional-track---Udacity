@@ -14,4 +14,3 @@ However, there is one flaw of this distribution - the area under the curve adds 
 ![Capture](https://user-images.githubusercontent.com/91827137/167329426-adab6a6d-a41e-449b-b7fa-055f8eac95ff.PNG)
 
 where μ is the mean and σ ^ 2 is the variance of the normal distribution.
-
