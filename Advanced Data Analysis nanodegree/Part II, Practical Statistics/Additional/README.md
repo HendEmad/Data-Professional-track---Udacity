@@ -6,4 +6,4 @@
 
 [The property of the normal distribution](https://www.statisticshowto.com/probability-and-statistics/normal-distributions/)
 
-[The mathematics behind the normal distribution](https://en.wikipedia.org/wiki/Normal_distribution) [and](https://mathworld.wolfram.com/NormalDistribution.html)
+[The mathematics behind the normal distribution](https://en.wikipedia.org/wiki/Normal_distribution) ,,,, [and](https://mathworld.wolfram.com/NormalDistribution.html)
