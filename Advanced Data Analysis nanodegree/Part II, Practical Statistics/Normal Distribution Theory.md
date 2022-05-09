@@ -1,1 +1,2 @@
-
+- All of testing and confidence intervals are defined through the normal distribution; because in most of experiments, we foten have a huge number of data points.
+- 
