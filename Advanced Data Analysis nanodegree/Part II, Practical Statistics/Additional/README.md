@@ -9,3 +9,9 @@
 [The mathematics behind the normal distribution](https://en.wikipedia.org/wiki/Normal_distribution) ,,,, [and](https://mathworld.wolfram.com/NormalDistribution.html)
 
 [central limit theorem](https://www.statisticshowto.com/probability-and-statistics/normal-distributions/central-limit-theorem-definition-examples/)
+
+Three of the most common ways are with the following estimation techniques:
+- [Maximum Likelihood Estimation](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)
+- [Method of Moments Estimation](https://en.wikipedia.org/wiki/Method_of_moments)
+- [Bayesian Estimation](https://en.wikipedia.org/wiki/Bayes_estimator)
+
