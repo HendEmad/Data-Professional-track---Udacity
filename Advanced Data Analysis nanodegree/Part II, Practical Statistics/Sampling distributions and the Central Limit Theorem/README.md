@@ -21,3 +21,6 @@ the distribution of a statistic.
 
 ![Capture](https://user-images.githubusercontent.com/91827137/168033978-4764dd4b-636c-4e39-83e6-29903943d62d.PNG)
 
+# Two important mathematical theorems for working with sampling distributions
+1. Law of Large Numbers ---> if we choose the right statistics to estimate a parameter. the larger out sample size, the closer out statistic gets to the parameter.
+2. Central Limit Theorem
