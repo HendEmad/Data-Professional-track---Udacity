@@ -23,6 +23,7 @@ the distribution of a statistic.
 
 # Two important mathematical theorems for working with sampling distributions
 1. Law of Large Numbers ---> if we choose the right statistics to estimate a parameter. the larger out sample size, the closer out statistic gets to the parameter.
-2. [Central Limit Theorem](https://medium.com/analytics-vidhya/understanding-the-central-limit-theorem-for-data-science-78f11544bbc6)
 
+3. [Central Limit Theorem](https://medium.com/analytics-vidhya/understanding-the-central-limit-theorem-for-data-science-78f11544bbc6)
+It states that with a large enough sample size, the sampling distribution of the mean will be normally distributed.
 
