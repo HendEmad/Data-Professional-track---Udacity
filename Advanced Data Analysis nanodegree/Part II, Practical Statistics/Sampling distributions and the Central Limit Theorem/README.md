@@ -34,3 +34,5 @@ It states that with a large enough sample size, the sampling distribution of the
 3. Difference in sample means (x1` - x2`)
 4. Difference in sample proportions (p1 - p2)
 
+# BootStrapping
+Bootstrapping is sampling with replacement. Using random.choice in Python actually samples in this way. Where the probability of any number in our set stays the same regardless of how many times it has been chosen. Flipping a coin and rolling a die is like bootstrap sampling as well, as rolling a 6 in one scenario doesn't mean that 6 is less likely later.
