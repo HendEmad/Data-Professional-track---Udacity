@@ -1,1 +1,1 @@
-
+Though these are beyond the scope of what is covered in this course, these techniques should be well understood for data scientists who may need to understand how to estimate some value that isn't as common as a mean or variance. Using one of these methods to determine a "best estimate" would be a necessity.
