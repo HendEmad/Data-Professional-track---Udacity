@@ -1,1 +1,2 @@
-
+- We use the sampling distribution ans bootstrapping to understand the values of a statistic that are possible.
+- Also, We can use these sampling distributions to understand the most likely values for a parameter as well.
