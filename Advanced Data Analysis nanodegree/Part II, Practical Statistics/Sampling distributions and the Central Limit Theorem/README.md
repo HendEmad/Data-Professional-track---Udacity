@@ -36,3 +36,15 @@ It states that with a large enough sample size, the sampling distribution of the
 
 # BootStrapping
 Bootstrapping is sampling with replacement. Using random.choice in Python actually samples in this way. Where the probability of any number in our set stays the same regardless of how many times it has been chosen. Flipping a coin and rolling a die is like bootstrap sampling as well, as rolling a 6 in one scenario doesn't mean that 6 is less likely later.
+
+# Recap Quiz
+- A numeric summary of a sample. ---> Statistic
+- A numeric summary of a population. ---> Parameter
+- The distribution of a statistic. ---> Sampling Distribution
+- Used to notate parameters. ---> Greek symbols
+- Sampling with replacement. ---> BootStrapping
+
+- A theorem that states: the larger the sample size, the closer our statistic gets to the parameter. ---> Law of Large numbers theorem
+- A theorem that states: if our sample size is large enough, the sample mean will be normally distributed. ---> The central limit theorem
+- Describing the data we have collected. ---> Descriptive Statistics
+- Using the data we have collected to draw conclusions about our population of interest. ---> Inferential Statistics
