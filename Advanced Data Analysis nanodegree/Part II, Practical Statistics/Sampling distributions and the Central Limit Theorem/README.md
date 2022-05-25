@@ -31,7 +31,7 @@ It states that with a large enough sample size, the sampling distribution of the
 - The Central Limit Theorem actually applies to these well-known statistics:
 1. Sample means (x`)
 2. Sample proportions (p)
-3. Difference in sample means (x1` - x2`)
+3. Difference in sample means (x1\` - x2\`)
 4. Difference in sample proportions (p1 - p2)
 
 # BootStrapping
