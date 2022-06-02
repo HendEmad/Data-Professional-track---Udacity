@@ -36,4 +36,25 @@ For example: if the packaging on a loght bulb states that the bulb will last 500
 * In the US judicial system, we say "Innocent until proven guilty". So, every indicidual is either innocent or guilty of an act. SO, this statement refers that everyone is innocent initially --> This is `null hypothesis(H0)` --> This refers to the rule that "H0 is the condition we believe to be true before we collect any data."
 * Gulity --> is the `alternative hypothesis(H1)` --> "The competing alternative hypothesis is that an individual is guilty"
 * We then collect data to see which hypothesis is supported.
-* 
+
+There are 4 posibilities of this example:
+
+![Screenshot (544)](https://user-images.githubusercontent.com/91827137/171724699-7a6d256b-8ec3-47c6-bdf6-21b443be4698.png)
+
+![Capture](https://user-images.githubusercontent.com/91827137/171724872-b1cc2efa-d312-425f-9985-c161960bd903.PNG)
+
+According to this example:
+
+There are two types of errors that are possible in hypothesis testing:
+  * Type I Errors and Type II Errors.
+    * `Type I Errors` are considered `the worst type of error`.
+    * A `Type I Error` is when the `alternative` is chosen, but the `null` is actually `true`.
+
+***Question***
+Just based on this information, can you guess which truth/decision combo is for each type of error?
+- Truth: Innocent, Decision: Guilty -----> Type I Error
+- Truth: Guilty, Decision: Innocent -----> Type II Error
+- Truth: Innocent, Decision: Innocent -----> No Error
+- Truth: Guilty, Decision: Guilty -----> No Error
+
+
