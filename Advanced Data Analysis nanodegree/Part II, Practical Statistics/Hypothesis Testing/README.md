@@ -21,13 +21,13 @@ For example: if the packaging on a loght bulb states that the bulb will last 500
 * The H0 and H1 are competing, non-overlapping hypotheses.
 
 - There are three ways to setup the null and alternative hypotheses:
-1. two-tailed test --> Equal hypothesis versus not equal hypothesis
+1. ***two-tailed test*** --> Equal hypothesis versus not equal hypothesis
     H0: parameter = some value
     H1: parameter ≠ some value
-2. left-tailed test(One tailed test) --> Equal versus less than
+2. ***left-tailed test(One tailed test)*** --> Equal versus less than
     H0: parameter = some value
     H1: parameter 6 some value
-3. right-tailed test(One tailed test) --> Equal versus greater than
+3. ***right-tailed test(One tailed test)*** --> Equal versus greater than
     H0: parameter = some value
     H1: parameter 7 some value
     
@@ -49,6 +49,13 @@ There are two types of errors that are possible in hypothesis testing:
   * Type I Errors and Type II Errors.
     * `Type I Errors` are considered `the worst type of error`.
     * A `Type I Error` is when the `alternative` is chosen, but the `null` is actually `true`.
+      [***Type I error*** occurrs if `H1 is chosen when H0 is true`], this is also called             ***False Positive*** ---> denoted by the symbol `α` or `alpha(Commonly these rates are 1-       5%.)` 
+    * A `Type II Error` is when the `null hypothesis` is chosen and the altrernative is actually       true, this is also called ***False Negative*** ---> They are denoted by the symbol `β` or       `beta`.
+    * SO:
+      * α = P(Type I Error) = P(rejecting H0 when H0 is true)
+      * β = P(Type II Error) = P(not rejecting H0 when H1 is true)
+
+***Note***: Correctly setting up the null and alternative hypotheses is important for avoiding these two types of errors.
 
 ***Question***
 Just based on this information, can you guess which truth/decision combo is for each type of error?
@@ -57,4 +64,11 @@ Just based on this information, can you guess which truth/decision combo is for 
 - Truth: Innocent, Decision: Innocent -----> No Error
 - Truth: Guilty, Decision: Guilty -----> No Error
 
+There are two extreme cases:
+1. Always choosing the null hypothesis:
+  * In this case, we may avoid Type I Error, but Type II Errors may be much.
+2.  Always choosing the alternative hypothesis:
+  * In this case, we may avoid Type II Error, but Type I Error may be much.
 
+There is a Threshold for how many type I errors occurring, and then they try to keep the Type II Error as low as possible while still meeting this threshold.
+- Type I Error rates are 0.01 for medical field, 0.05 for research and business.
