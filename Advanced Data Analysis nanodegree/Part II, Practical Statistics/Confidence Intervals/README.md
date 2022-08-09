@@ -1,4 +1,4 @@
-- We use the sampling distribution ans bootstrapping to understand the values of a statistic that are possible.
+- We use the sampling distribution and bootstrapping to understand the values of a statistic that are possible.
 - Also, We can use these sampling distributions to understand the most likely values for a parameter as well.
 - In the real world, we don't usually know the value of a parameter as our populations of interest tends to be things like everyone in the world or all the past, present, and future transactions of a company.
 - We just don't have all the information we might like to about these populations. The question here is  
